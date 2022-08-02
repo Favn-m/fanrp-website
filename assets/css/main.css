@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --background: rgb(241, 241, 241);
+    --nav-background: rgb(255, 255, 255);
+
+    --button-text: rgb(222, 228, 234);
+    --button-background: rgb(37, 37, 42);
+    --button-background-hover: rgb(74, 74, 82);
+
+    --card-title: rgb(0, 0, 0);
+    --card-text: rgb(56, 58, 60);
+    --card-background: rgb(255, 255, 255);
+    --card-outline: rgb(204, 211, 220);
+    --card-background-hover: rgb(59, 61, 65);
+
+    --green: rgb(104, 153, 104);
+    --blue: rgb(104, 124, 153);
+    --red: rgb(153, 104, 104);
+    --text-color: rgb(0, 0, 0);
+}
+
+/* --- BODY --- */
+
+body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    background-color: var(--background);
+    font-weight: 100px;
+
+
+    margin: 1em 2em;
+}
+
+.flex{
+    display: flex;
+}
+
+.gap-5{
+    gap:0.5rem;
+}
+
+.gap-15{
+    gap: 3.2rem;
+}
+
+.grid{
+    display: grid;
+}
+
+.grid-cols-4{
+    grid-template-columns: repeat(4,272px);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+/* BUTTONS */
+
+.button{
+    text-decoration: none;
+    color: var(--button-text);
+    border-radius: 0.7em;
+    padding: 0.6em 1.7em;
+    background-color: var(--button-background);
+
+    /* outline: var(--button-background) solid 4px; */
+
+    font-size: 24px;
+
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover{
+    background-color: var(--button-background-hover);
+}
+
+
+/* NAVIGATION */
+
+nav a{
+    text-decoration: none;
+    color: black;
+
+    font-weight: 900;
+    font-size: 28px;
+
+    align-items: center;
+}
+
+nav .logo{
+    flex-direction: row;
+    align-items: center;
+}
+
+nav .logo img{
+    width: 1.5em;
+}
+
+/* HEAD SECTION */
+
+#head{
+    margin: 1em 0em;
+
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#head .info{
+    text-align: left;
+
+    font-size: 21px;
+
+    
+    display:flex;
+    flex-direction: column;
+
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#head h1{
+    font-family: sans-serif;
+    font-size: 49px;
+
+    line-height: 2.6rem;
+
+    padding: 0;
+    margin: 0;
+
+    font-weight: 900;
+}
+
+#head img{
+    width: 37em;
+    /* transform: rotateY(180deg); */
+}
+
+#head .buttons{
+    text-align: right;
+}
+
+#head .image-adds{
+    position: absolute;
+
+    z-index: -20;
+
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+
+    right: -32px;
+
+    width: 24em;
+    height: 22.3em;
+
+    top: 5.7em;
+
+    background-color: rgba(80, 81, 89, 0.63);
+}
+
+.head-image{
+    position: relative;
+
+    animation-duration: 1s;
+    animation-name: moveright;
+}
+
+
+
+/* CARDS SECTION */
+
+.cards{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card{
+    display: block;
+
+    color: var(--card-text);
+
+    /* height: 21em; */
+    /* width: 13em; */
+    background-color: var(--card-background);
+
+    border-radius: 2em;
+
+    padding: 2em;
+
+    outline: solid var(--card-outline) 2px;
+
+    position: relative;
+    transition: all 0.18s ease-in-out;
+
+    box-shadow: 0px 5px 5px rgba(25, 25, 25, 0);
+
+    top: 0;
+}
+
+.card:hover {
+    top:-0.3em;
+    box-shadow: 0px 5px 5px rgba(25, 25, 25, 0.144);
+}
+
+.card h1{
+    color: var(--card-title);
+    text-align: center;
+}
+
+.card p{
+
+}
+
+/* --- ANIMATIONS --- */
+
+@keyframes moveright {
+    from {
+        right: -30em;
+    }
+
+    to {
+        right: 0em;
+    }
+}
