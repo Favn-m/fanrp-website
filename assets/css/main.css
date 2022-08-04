@@ -30,8 +30,17 @@ body{
     font-weight: 100px;
 
 
-    margin: 1em 2em;
+    margin: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 1366px;
 }
+
+/* .container{
+    margin: 0 3em;
+} */
 
 .flex{
     display: flex;
@@ -47,6 +56,10 @@ body{
 
 .grid{
     display: grid;
+}
+
+.m-1-2{
+    margin: 1em 2em;
 }
 
 .grid-cols-4{
@@ -81,6 +94,8 @@ body{
 
 /* NAVIGATION */
 
+
+
 nav a{
     text-decoration: none;
     color: black;
@@ -103,11 +118,11 @@ nav .logo img{
 /* HEAD SECTION */
 
 #head{
-    margin: 1em 0em;
-
     display:flex;
     flex-direction: row;
     align-items: center;
+    
+    /* margin: ; */
 }
 
 #head .info{
@@ -137,6 +152,7 @@ nav .logo img{
 
 #head img{
     width: 37em;
+    /* filter: drop-shadow(5px -1px 0px rgba(80, 81, 89, 0.63)); */
     /* transform: rotateY(180deg); */
 }
 
@@ -173,9 +189,8 @@ nav .logo img{
 
 /* CARDS SECTION */
 
-.cards{
-    margin-left: auto;
-    margin-right: auto;
+#cardsinfo{
+    margin: 6em 1em 2em 1em;
 }
 
 .card{
